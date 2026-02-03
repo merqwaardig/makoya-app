@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="17px" viewBox="0 0 23 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Hamburger_menu</title>
+    <g id="Def-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-V1" transform="translate(-21, -40)" fill="#3D3D3D">
+            <g id="Hamburger_menu" transform="translate(32.796, 48.6088) rotate(180) translate(-32.796, -48.6088)translate(21.296, 40.1088)">
+                <rect id="Rectangle-13" x="0.648" y="0.554393305" width="22" height="2" rx="1"></rect>
+                <rect id="Rectangle-15" x="0.648" y="7.55439331" width="22" height="2" rx="1"></rect>
+                <path d="M0.648,15.5543933 C0.648,16.1066781 1.09571525,16.5543933 1.648,16.5543933 C6.71519867,16.5543933 11.7823973,16.5543933 16.849596,16.5543933 C18.449064,16.5543933 20.048532,16.5543933 21.648,16.5543933 C22.2002847,16.5543933 22.648,16.1066781 22.648,15.5543933 C22.648,15.0021086 22.2002847,14.5543933 21.648,14.5543933 L1.648,14.5543933 C1.09571525,14.5543933 0.648,15.0021086 0.648,15.5543933 Z" id="Rectangle-16"></path>
+            </g>
+        </g>
+    </g>
+</svg>

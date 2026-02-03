@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   bottomSpacer: {
-    height: 80,
+    height: 116,
   },
 });
 
