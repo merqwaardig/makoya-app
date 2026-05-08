@@ -8,6 +8,7 @@ interface CourseCardProps {
   progress: number;
   total: number;
   color: string;
+  onPress?: () => void;
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({
@@ -16,11 +17,12 @@ const CourseCard: React.FC<CourseCardProps> = ({
   progress,
   total,
   color,
+  onPress,
 }) => {
   const progressPercent = (progress / total) * 100;
 
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress} activeOpacity={0.85}>
       <View style={styles.topRow}>
         <View style={styles.iconContainer}>{icon}</View>
         <Text style={styles.title}>{title}</Text>
