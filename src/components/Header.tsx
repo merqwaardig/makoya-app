@@ -1,20 +1,31 @@
-import React, { useRef, useState, useCallback } from 'react';
+import React, { useRef, useCallback } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Animated } from 'react-native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import HamburgerIcon from '../icons/HamburgerIcon';
+import type { RootStackParamList } from '../../App';
+
+type Nav = NativeStackNavigationProp<RootStackParamList>;
 
 const Header: React.FC = () => {
+  const navigation = useNavigation<Nav>();
   const rotateAnim = useRef(new Animated.Value(0)).current;
-  const [isOpen, setIsOpen] = useState(false);
+
+  useFocusEffect(
+    useCallback(() => {
+      rotateAnim.setValue(0);
+    }, [rotateAnim])
+  );
 
   const handlePress = useCallback(() => {
-    const toValue = isOpen ? 0 : 1;
     Animated.timing(rotateAnim, {
-      toValue,
-      duration: 250,
+      toValue: 1,
+      duration: 200,
       useNativeDriver: true,
-    }).start();
-    setIsOpen(!isOpen);
-  }, [isOpen, rotateAnim]);
+    }).start(() => {
+      navigation.navigate('Menu');
+    });
+  }, [navigation, rotateAnim]);
 
   const rotate = rotateAnim.interpolate({
     inputRange: [0, 1],
