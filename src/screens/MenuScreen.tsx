@@ -32,7 +32,7 @@ const SECTIONS: Section[] = [
   {
     title: 'SERVICES',
     items: [
-      { label: 'CareTakers' },
+      { label: 'CareTakers', route: 'Caretaker' },
       { label: 'Products', comingSoon: true },
     ],
   },

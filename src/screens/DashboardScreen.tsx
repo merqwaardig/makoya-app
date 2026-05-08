@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/native';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import Header from '../components/Header';
 import ActionCards from '../components/ActionCards';
 import LunarCalendar from '../components/LunarCalendar';
@@ -9,8 +11,13 @@ import CareTakers from '../components/CareTakers';
 import BottomNavigation from '../components/BottomNavigation';
 import Chakra1Icon from '../icons/Chakra1Icon';
 import Chakra2Icon from '../icons/Chakra2Icon';
+import type { RootStackParamList } from '../../App';
+
+type Nav = NativeStackNavigationProp<RootStackParamList>;
 
 const DashboardScreen: React.FC = () => {
+  const navigation = useNavigation<Nav>();
+
   return (
     <SafeAreaView style={styles.safeArea} edges={['top']}>
       <View style={styles.container}>
@@ -32,6 +39,7 @@ const DashboardScreen: React.FC = () => {
             progress={8}
             total={28}
             color="#BD151B"
+            onPress={() => navigation.navigate('Foundation')}
           />
 
           <CourseCard
